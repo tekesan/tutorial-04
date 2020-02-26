@@ -1,0 +1,26 @@
+<html xmlns:th="http://www.thymeLeaf.org">
+<head>
+	<title>Add Flight</title>
+</head>
+<body>
+<h2>Welcome!</h2>
+
+<h3>Tambah Penerbangan</h3>
+<td><a th:action="@{/pilot/add}">Tambah</a>
+
+<form th:action="@{/pilot/add}" th:object="${flight}" method="POST">
+<input type="hidden" th:field="*{pilot}"/>
+Flight Number: <br>
+<input type="text" name="flightNumber"/>
+Origin: <br>
+<input type="text" name="origin"/>
+Destination: <br>
+<input type="text" name="destination"/>
+Time: <br>
+<input type="text" name="time"/>
+
+<button type="submit">Submit</button>
+
+</form>
+</body>
+</html>
